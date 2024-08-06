@@ -181,9 +181,9 @@ void UI_DisplayStatus() {
 //                break;
 //        }
 
-        unsigned int space_needed = (7 * strlen(s));
+        unsigned int space_needed = (3 * strlen(s));
         if (x2 >= (x1 + space_needed))
-            UI_PrintStringSmallBuffer(s, line + x2 - space_needed);
+            GUI_DisplaySmallest(s, x2 - 4 - space_needed, 1, true, true);
     }
 
     // move to right side of the screen
