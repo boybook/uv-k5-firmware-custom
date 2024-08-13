@@ -169,7 +169,7 @@ int MENU_GetLimits(uint8_t menu_id, int32_t *pMin, int32_t *pMax) {
     switch (menu_id) {
         case MENU_SQL:
             *pMin = 0;
-            *pMax = 9;
+            *pMax = 10;
             break;
 
         case MENU_STEP:

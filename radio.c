@@ -413,7 +413,7 @@ void RADIO_ConfigureSquelchAndOutputPower(VFO_Info_t *pInfo) {
         pInfo->SquelchCloseNoiseThresh = 127;   // 127 ~ 0
         pInfo->SquelchOpenGlitchThresh = 255;   // 255 ~ 0
     } else {    // squelch >= 1
-        Base += gEeprom.SQUELCH_LEVEL;                                        // my eeprom squelch-1
+        Base += gEeprom.SQUELCH_LEVEL - 1;                                        // my eeprom squelch-1
         // VHF   UHF
         EEPROM_ReadBuffer(Base + 0x00, &pInfo->SquelchOpenRSSIThresh, 1);  //  50    10
         EEPROM_ReadBuffer(Base + 0x10, &pInfo->SquelchCloseRSSIThresh, 1);  //  40     5
